@@ -38,6 +38,14 @@ function validate() {
             "must be a valid year.";
         validator=false;
       } 
+
+       else if (monthInp.value> date) {
+        monthInp.style.borderColor = "red";
+        monthInp.parentElement.querySelector("small").innerText = "must be valid month.";
+        validator = false;
+        
+       }
+
       else {
         i.style.borderColor = "black";
         parent.querySelector("small").innerText = "";
@@ -69,4 +77,5 @@ function validate() {
   }
   
   form.addEventListener("submit", handleSubmit);
+
   
